@@ -1,0 +1,8 @@
+kicrograma kicrokicrograma {
+    var kicroX;
+
+    kicroX = 5;
+
+    kimprimir 5;
+    kimprimir kicroX;
+}
