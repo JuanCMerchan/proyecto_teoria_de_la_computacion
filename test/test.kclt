@@ -3,6 +3,11 @@ kicrograma kicrokicrograma {
 
     kicroX = 5;
 
-    kimprimir 5;
+    kimprimir 6;
     kimprimir kicroX;
+
+    var kicroY;
+    kicroY = kicroX;
+
+    kimprimir kicroY;
 }

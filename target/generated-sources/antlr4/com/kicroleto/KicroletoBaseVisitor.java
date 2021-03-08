@@ -1,5 +1,9 @@
 // Generated from com\kicroleto\Kicroleto.g4 by ANTLR 4.9
 package com.kicroleto;
+
+    import java.util.Map;
+    import java.util.HashMap;
+
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -45,12 +49,12 @@ public class KicroletoBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPrintln_var(KicroletoParser.Println_varContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPrintln(KicroletoParser.PrintlnContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPrintln_int(KicroletoParser.Println_intContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpresion(KicroletoParser.ExpresionContext ctx) { return visitChildren(ctx); }
 }

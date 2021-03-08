@@ -1,6 +1,10 @@
 // Generated from com\kicroleto\Kicroleto.g4 by ANTLR 4.9
 package com.kicroleto;
 
+    import java.util.Map;
+    import java.util.HashMap;
+
+
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
@@ -64,25 +68,25 @@ public class KicroletoBaseListener implements KicroletoListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrintln_var(KicroletoParser.Println_varContext ctx) { }
+	@Override public void enterPrintln(KicroletoParser.PrintlnContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrintln_var(KicroletoParser.Println_varContext ctx) { }
+	@Override public void exitPrintln(KicroletoParser.PrintlnContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrintln_int(KicroletoParser.Println_intContext ctx) { }
+	@Override public void enterExpresion(KicroletoParser.ExpresionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrintln_int(KicroletoParser.Println_intContext ctx) { }
+	@Override public void exitExpresion(KicroletoParser.ExpresionContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

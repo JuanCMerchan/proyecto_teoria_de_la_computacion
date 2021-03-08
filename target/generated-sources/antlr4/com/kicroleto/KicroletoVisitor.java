@@ -1,5 +1,9 @@
 // Generated from com\kicroleto\Kicroleto.g4 by ANTLR 4.9
 package com.kicroleto;
+
+    import java.util.Map;
+    import java.util.HashMap;
+
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -35,15 +39,15 @@ public interface KicroletoVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitVar_assign(KicroletoParser.Var_assignContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link KicroletoParser#println_var}.
+	 * Visit a parse tree produced by {@link KicroletoParser#println}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPrintln_var(KicroletoParser.Println_varContext ctx);
+	T visitPrintln(KicroletoParser.PrintlnContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link KicroletoParser#println_int}.
+	 * Visit a parse tree produced by {@link KicroletoParser#expresion}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPrintln_int(KicroletoParser.Println_intContext ctx);
+	T visitExpresion(KicroletoParser.ExpresionContext ctx);
 }

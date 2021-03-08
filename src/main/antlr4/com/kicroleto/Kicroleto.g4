@@ -1,15 +1,30 @@
 grammar Kicroleto;
 
+@parser::header {
+    import java.util.Map;
+    import java.util.HashMap;
+}
+
+@parser::members {
+    Map<String, Object> symbolTable = new HashMap<String, Object>();
+}
+
 program: PROGRAM ID BRACKET_OPEN
     sentence*
     BRACKET_CLOSE;
 
-sentence: var_decl | var_assign | println_var | println_int;
+sentence: var_decl | var_assign | println;
 
-var_decl: VAR ID SEMICOLON;
-var_assign: ID ASSIGN INT SEMICOLON;
-println_var: PRINTLN ID SEMICOLON;
-println_int: PRINTLN INT SEMICOLON;
+var_decl: VAR ID SEMICOLON
+    {symbolTable.put($ID.text, 0);};
+var_assign: ID ASSIGN expresion SEMICOLON
+    {symbolTable.put($ID.text, $expresion.value);};
+println: PRINTLN expresion SEMICOLON
+    {System.out.println($expresion.value);};
+expresion returns [Object value]:
+    INT {$value = Integer.parseInt($INT.text);}
+    |
+    ID {$value = symbolTable.get($ID.text);};
 
 PROGRAM: 'kicrograma';
 VAR: 'var';
@@ -22,8 +37,8 @@ MINUS: '-';
 MULT: '*';
 DIV: '/';
 
-AND: 'kicroY';
-OR: 'kicroO';
+AND: 'kicro&&';
+OR: 'kicro||';
 NOT: 'negativo_hermano!';
 
 GT: '>';

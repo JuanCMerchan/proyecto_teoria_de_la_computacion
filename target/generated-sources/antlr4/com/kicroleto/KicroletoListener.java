@@ -1,5 +1,9 @@
 // Generated from com\kicroleto\Kicroleto.g4 by ANTLR 4.9
 package com.kicroleto;
+
+    import java.util.Map;
+    import java.util.HashMap;
+
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -48,23 +52,23 @@ public interface KicroletoListener extends ParseTreeListener {
 	 */
 	void exitVar_assign(KicroletoParser.Var_assignContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link KicroletoParser#println_var}.
+	 * Enter a parse tree produced by {@link KicroletoParser#println}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrintln_var(KicroletoParser.Println_varContext ctx);
+	void enterPrintln(KicroletoParser.PrintlnContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link KicroletoParser#println_var}.
+	 * Exit a parse tree produced by {@link KicroletoParser#println}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrintln_var(KicroletoParser.Println_varContext ctx);
+	void exitPrintln(KicroletoParser.PrintlnContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link KicroletoParser#println_int}.
+	 * Enter a parse tree produced by {@link KicroletoParser#expresion}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrintln_int(KicroletoParser.Println_intContext ctx);
+	void enterExpresion(KicroletoParser.ExpresionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link KicroletoParser#println_int}.
+	 * Exit a parse tree produced by {@link KicroletoParser#expresion}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrintln_int(KicroletoParser.Println_intContext ctx);
+	void exitExpresion(KicroletoParser.ExpresionContext ctx);
 }
